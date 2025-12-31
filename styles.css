@@ -8,7 +8,7 @@ body {
 
 /* 👇 ESTA ES LA CLAVE */
 section[id] {
-  scroll-margin-top: 6rem;
+  scroll-margin-top: 7rem;
 }
 
 header {
