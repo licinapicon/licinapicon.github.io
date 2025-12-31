@@ -6,6 +6,11 @@ body {
   color: #111;
 }
 
+/* 👇 ESTA ES LA CLAVE */
+section[id] {
+  scroll-margin-top: 6rem;
+}
+
 header {
   padding: 3rem 2rem;
   border-bottom: 1px solid #e5e5e5;
@@ -68,6 +73,4 @@ footer {
   color: #666;
   font-size: 0.9rem;
 }
-section[id] {
-  scroll-margin-top: 6rem;
-}
+
