@@ -72,22 +72,4 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Forzar color de texto del párrafo "about" en todo el sitio (excluye enlaces y encabezados) */
-body, body * {
-  color: #334155 !important; /* text-slate-700 */
-}
-
-/* Excluir enlaces y encabezados: permitir que sus estilos por defecto o utilidades de Tailwind los definan */
-a, a *,
-h1, h2, h3, h4, h5, h6 {
-  color: unset !important;
-}
-
-/* Modo oscuro */
-.dark body, .dark body * {
-  color: #94a3b8 !important; /* text-slate-300 */
-}
-.dark a, .dark a *, .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
-  color: unset !important;
-}
 
