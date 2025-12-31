@@ -66,15 +66,10 @@
             <a href="#contact">Contacto</a>
 
             <!-- toggle -->
-            <button
-              id="theme-toggle"
-              class="ml-4 text-xl hover:opacity-80 transition"
-              aria-label="Toggle dark mode"
-            >
-                <span class="dark:hidden">🌙</span>
-                <span class="hidden dark:inline">☀️</span>
+            <button id="theme-toggle" aria-label="Toggle dark mode">
+              <span id="icon-sun">☀️</span>
+              <span id="icon-moon" class="hidden">🌙</span>
             </button>
-
 
         </div>
     </nav>
@@ -342,27 +337,25 @@
 </footer>
 
 <script>
-  const toggle = document.getElementById('theme-toggle');
-  const root = document.documentElement;
+  const toggle = document.getElementById("theme-toggle");
+  const sun = document.getElementById("icon-sun");
+  const moon = document.getElementById("icon-moon");
+  const html = document.documentElement;
 
-  // estado inicial
-  if (
-    localStorage.theme === 'dark' ||
-    (!('theme' in localStorage) &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches)
-  ) {
-    root.classList.add('dark');
-  } else {
-    root.classList.remove('dark');
+  function setTheme(isDark) {
+    html.classList.toggle("dark", isDark);
+    sun.classList.toggle("hidden", isDark);
+    moon.classList.toggle("hidden", !isDark);
   }
 
-  toggle.addEventListener('click', () => {
-    root.classList.toggle('dark');
-    localStorage.theme = root.classList.contains('dark')
-      ? 'dark'
-      : 'light';
+  // estado inicial: CLARO
+  setTheme(false);
+
+  toggle.addEventListener("click", () => {
+    setTheme(!html.classList.contains("dark"));
   });
 </script>
+
 
 
     
