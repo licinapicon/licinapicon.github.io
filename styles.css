@@ -1,24 +1,17 @@
 /* =========================
-   FORZAR MODO OSCURO GLOBAL
+   FORZAR MODO CLARO GLOBAL
    ========================= */
 
 :root {
-  color-scheme: dark; /* le dice al navegador que solo hay modo oscuro */
+  color-scheme: light; /* le dice al navegador que solo hay modo claro */
 }
 
 html, body {
-  background-color: #000 !important;
-  color: #fff !important;
+  background-color: #ffffff !important;
+  color: #0f172a !important; /* slate-900 */
 }
 
 /* Anula cualquier intento del navegador de cambiar colores */
 @media (prefers-color-scheme: light), (prefers-color-scheme: dark) {
   html, body {
-    background-color: #000 !important;
-    color: #fff !important;
-  }
-}
-
-/* =========================
-   ESTILOS GENERALES
-   ==
+    background-color: #ff
