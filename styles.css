@@ -1,4 +1,18 @@
 /* =========================
+   BLOQUEO DE DARK MODE DEL NAVEGADOR
+   ========================= */
+
+:root {
+  color-scheme: light only;
+}
+
+html, body {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+
+/* =========================
    FORZAR MODO CLARO GLOBAL
    ========================= */
 
